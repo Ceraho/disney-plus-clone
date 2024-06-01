@@ -13,7 +13,7 @@ function HeroSection() {
       <p className="text-[16px] text-silver text-center">
         Enter your email to create or restart your subscription.
       </p>
-      <form action="" className="md:flex md:justify-between md:w-3/5">
+      <form action="" className="md:flex md:justify-between md:w-2/5">
         <input
           type="email"
           name="email"
