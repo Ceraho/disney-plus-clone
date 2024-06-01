@@ -8,11 +8,18 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      colors: {
+        'silver': '#c0c0c0',
+        'emailInputFieldColor': '#31343e',
+        'mainBgColor': '#040714',
+        'signUpButtonBgColor': '#02d6e8',
+        'signUpButtonTextColor': '#02172a',
+        'faqButtonColor': '#13151d'
       },
+      backgroundImage: {
+        'heroImage': "url('/main-banner-1.png')",
+        'secondHeroImage': "url('/main-banner-2.png')",
+      }
     },
   },
   plugins: [],
