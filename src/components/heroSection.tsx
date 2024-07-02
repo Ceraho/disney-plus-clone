@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import Link from "next/link";
+import HeroSectionForm from "./heroSectionForm";
 
 function HeroSection() {
   return (
@@ -13,20 +13,7 @@ function HeroSection() {
       <p className="text-[16px] text-silver text-center">
         Enter your email to create or restart your subscription.
       </p>
-      <form action="" className="md:flex md:justify-between md:w-2/5">
-        <input
-          type="email"
-          name="email"
-          className="rounded box-border bg-emailInputFieldColor border border-emailInputFieldColor h-[50px] px-[12px] w-full mb-2"
-          placeholder="Email"
-        />
-        <button
-          type="submit"
-          className="rounded box-border text-signUpButtonTextColor bg-signUpButtonBgColor border border-signUpButtonBgColor h-[50px] px-[12px] w-full md:max-w-[260px]"
-        >
-          SIGN UP NOW
-        </button>
-      </form>
+      <HeroSectionForm />
       <p className="text-silver text-[18px] text-center">
         Get 12 months for the price of 10 with an annual subscription, compared
         to paying monthly.

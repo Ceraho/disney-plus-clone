@@ -4,11 +4,11 @@ function PromoteSection() {
   return (
     <>
       {/* Only on Disney part */}
-      <section className="flex flex-col items-center py-[10vw] px-[5vw] gap-4 md:h-dvh md:bg-secondHeroImage md:bg-top md:bg-no-repeat md:bg-contain md:items-start md:justify-center">
-        <h2 className="text-[32px] font-bold text-center leading-tight md:text-[40px]">
+      <section className="flex flex-col items-center py-[10vw] px-[5vw] gap-4 md:h-dvh md:bg-secondHeroImage md:bg-top md:bg-no-repeat md:bg-contain md:items-start md:justify-start">
+        <h2 className="text-[32px] font-bold text-center leading-tightlg:text-[40px]">
           Only on Disney+
         </h2>
-        <p className="text-silver text-[18px] text-center md:mb-24">
+        <p className="text-silver text-[18px] text-center lg:mb-24">
           Exclusive series and Originals you won't find on any other streaming
           service.
         </p>

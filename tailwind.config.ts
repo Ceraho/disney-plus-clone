@@ -19,6 +19,9 @@ const config: Config = {
       backgroundImage: {
         'heroImage': "url('/main-banner-1.png')",
         'secondHeroImage': "url('/main-banner-2.png')",
+        'loginPageGradient': 'radial-gradient(circle at 20% 95%, #056877, #051828 96%)',
+        'homeBg': "url('/disneyPlusHomeBg.png')",
+        'disneyLogo': "url('/DisneyLogo.svg')",
       }
     },
   },
