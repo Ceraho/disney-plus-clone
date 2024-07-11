@@ -22,7 +22,7 @@ export default function RootLayout({
         className={inter.className + " h-full bg-homeBg bg-no-repeat bg-cover"}
       >
         <HomeNavbar />
-        <div className="pt-20 px-10">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );

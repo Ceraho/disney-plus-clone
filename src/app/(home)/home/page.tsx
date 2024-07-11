@@ -13,7 +13,7 @@ const HomePage = async () => {
   const seriesAiringTodayPosters = seriesTodayResults.map((tvShow) => getImagePath(tvShow.poster_path));
   
   return (
-    <div>
+    <div className="pt-20 px-4 md:px-20">
       <Carousel moviePosters={trendingMoviePosters} category="Trending Movies" />
       <Carousel moviePosters={popularTvPosters} category="Popular TV Series" />
       <Carousel moviePosters={seriesAiringTodayPosters} category="TV Series Airing Today" />

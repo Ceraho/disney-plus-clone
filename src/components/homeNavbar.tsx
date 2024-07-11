@@ -54,32 +54,6 @@ const HomeNavbar = () => {
             <EllipsisVertical width={20} height={20} />
           </button>
         </div>
-
-        {/* Account Dropdown */}
-        <div className="group relative">
-          <button className="flex items-center gap-2">
-            <p className="text-md bg-blue-500 w-fit h-fit py-2 px-4 rounded-full">
-              E
-            </p>
-          </button>
-          <div className="absolute right-0 mt-2 w-48 bg-[#131313] rounded-md shadow-lg py-1 z-10 hidden group-hover:block">
-            <button className="block px-4 py-2 text-sm text-[#cacaca]">
-              Edit Profiles
-            </button>
-            <button className="block px-4 py-2 text-sm text-[#cacaca]">
-              App Settings
-            </button>
-            <button className="block px-4 py-2 text-sm text-[#cacaca]">
-              Account
-            </button>
-            <button className="block px-4 py-2 text-sm text-[#cacaca]">
-              Help
-            </button>
-            <button className="block px-4 py-2 text-sm text-[#cacaca]">
-              Log Out
-            </button>
-          </div>
-        </div>
       </div>
 
       {/* Desktop View */}
@@ -144,25 +118,9 @@ const HomeNavbar = () => {
           </button>
         </li>
       </ul>
-
-      {/* Account Dropdown */}
-      <div className="hidden md:flex group flex-col rounded-md p-6 fixed z-10 right-0 top-0 hover:bg-[#131313] bg-transparent hover:border-b hover:border-l border-gray-400/40 h-fit w-fit hover:w-60">
-        <div className="flex flex-row-reverse items-center gap-4 pb-4">
-          <p className="text-xl bg-blue-500 w-fit h-fit p-2 px-4 rounded-full">
-            E
-          </p>
-          <p className="text-sm">Erim</p>
-        </div>
-        <div className="hidden group-hover:flex flex-col gap-3 list-none text-[#cacaca] font-extralight text-sm tracking-wide pt-4 border-t border-gray-500/50">
-          <button>Edit Profiles</button>
-          <button>App Settings</button>
-          <button>Account</button>
-          <button>Help</button>
-          <button>Log Out</button>
-        </div>
-      </div>
     </nav>
   );
 };
 
 export default HomeNavbar;
+

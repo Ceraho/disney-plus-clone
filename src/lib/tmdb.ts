@@ -1,9 +1,31 @@
-const TMDB_BASE_URL = process.env.TMDB_BASE_URL;
-const TMDB_API_KEY = process.env.TMDB_API_KEY;
+const NEXT_PUBLIC_TMDB_BASE_URL = process.env.NEXT_PUBLIC_TMDB_BASE_URL;
+const NEXT_PUBLIC_TMDB_API_KEY = process.env.NEXT_PUBLIC_TMDB_API_KEY;
+
+if (!NEXT_PUBLIC_TMDB_API_KEY || !NEXT_PUBLIC_TMDB_BASE_URL) {
+  throw new Error("NEXT_PUBLIC_TMDB_BASE_URL and NEXT_PUBLIC_TMDB_API_KEY must be defined");
+}
+
+export const searchAllContent = async (query: string): Promise<Movies> => {
+  try {
+    const response = await fetch(
+      `${NEXT_PUBLIC_TMDB_BASE_URL}/search/multi?api_key=${NEXT_PUBLIC_TMDB_API_KEY}&query=${query}&language=en-US`
+    );
+    if (!response.ok) {
+      throw new Error("Failed to fetch content");
+    }
+
+    const movies: Movies = await response.json();
+    return movies;
+  } catch (error) {
+    throw new Error(`Failed to fetch content: ${error}`);
+  }
+};
 
 export const getTrendingMovies = async (): Promise<Movies> => {
   try {
-    const response = await fetch(`${TMDB_BASE_URL}/trending/all/day?api_key=${TMDB_API_KEY}&language=en-US`);
+    const response = await fetch(
+      `${NEXT_PUBLIC_TMDB_BASE_URL}/trending/all/day?api_key=${NEXT_PUBLIC_TMDB_API_KEY}&language=en-US`
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch movies");
     }
@@ -17,7 +39,9 @@ export const getTrendingMovies = async (): Promise<Movies> => {
 
 export const getPopularTvSeries = async (): Promise<TvSeries> => {
   try {
-    const response = await fetch(`${TMDB_BASE_URL}/tv/popular?api_key=${TMDB_API_KEY}&language=en-US&page=1`);
+    const response = await fetch(
+      `${NEXT_PUBLIC_TMDB_BASE_URL}/tv/popular?api_key=${NEXT_PUBLIC_TMDB_API_KEY}&language=en-US&page=1`
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch tv series");
     }
@@ -31,7 +55,9 @@ export const getPopularTvSeries = async (): Promise<TvSeries> => {
 
 export const getSeriesAiringToday = async (): Promise<TvSeries> => {
   try {
-    const response = await fetch(`${TMDB_BASE_URL}/tv/airing_today?api_key=${TMDB_API_KEY}&language=en-US&page=1`);
+    const response = await fetch(
+      `${NEXT_PUBLIC_TMDB_BASE_URL}/tv/airing_today?api_key=${NEXT_PUBLIC_TMDB_API_KEY}&language=en-US&page=1`
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch tv series airing today");
     }
